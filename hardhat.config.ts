@@ -79,7 +79,7 @@ const config: HardhatUserConfig = {
 if (testPrivateKey) {
   config.networks = {
     mainnet: createTestnetConfig("mainnet"),
-    rinkeby: createTestnetConfig("rinkeby"),
+    goerli: createTestnetConfig("goerli"),
     matic: createTestnetConfig("matic"),
     mumbai: createTestnetConfig("mumbai")
   };
