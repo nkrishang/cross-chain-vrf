@@ -1,7 +1,6 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-import "@typechain/hardhat";
 import "@nomiclabs/hardhat-waffle";
 import "hardhat-abi-exporter";
 import "@nomiclabs/hardhat-etherscan";
@@ -65,15 +64,13 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  typechain: {
-    outDir: "typechain",
-    target: "ethers-v5",
-  },
+
   abiExporter: {
     flat: true,
   },
   etherscan: {
-    apiKey: etherscanKey, // or polygonscanKey
+    apiKey: etherscanKey,
+    // apiKey: polygonscanKey,
   }
 };
 
