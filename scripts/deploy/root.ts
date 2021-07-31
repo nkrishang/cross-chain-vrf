@@ -13,10 +13,10 @@ async function main() {
   // Deploy Root to Mainnet || Goerli
   const { checkPointManager, fxRoot } = fxPortalTestnets;
 
-  const VRFRootTunnel_Factory: ContractFactory = await ethers.getContractFactory("VRFRootTunnel");
-  const vrfRootTunnel: Contract = await VRFRootTunnel_Factory.deploy(checkPointManager, fxRoot)
+  const FxStateRootTunnel_Factory: ContractFactory = await ethers.getContractFactory("FxStateRootTunnel");
+  const rootTunnel: Contract = await FxStateRootTunnel_Factory.deploy(checkPointManager, fxRoot)
 
-  console.log("Deployed VRFRootTunnel at: ", vrfRootTunnel.address);
+  console.log("Deployed FxStateRootTunnel at: ", rootTunnel.address);
 }
 
 main()

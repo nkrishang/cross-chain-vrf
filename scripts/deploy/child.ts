@@ -2,7 +2,6 @@ import { run, ethers } from "hardhat";
 import { Contract, ContractFactory } from 'ethers';
 
 import { fxPortalTestnets } from "../../utils/maticBridge"
-import { chainlinkVarsMumbai } from "../../utils/chainlink" 
 
 async function main() {
   await run("compile");
@@ -13,18 +12,11 @@ async function main() {
 
   // Deploy Child to Matic || Mumbai
   const { fxChild } = fxPortalTestnets;
-  const { vrfCoordinator, linkTokenAddress, keyHash, fees } = chainlinkVarsMumbai
 
-  const VRFChildTunnel_Factory: ContractFactory = await ethers.getContractFactory("VRFChildTunnel");
-  const vrfChildTunnel: Contract = await VRFChildTunnel_Factory.deploy(
-    fxChild,
-    vrfCoordinator,
-    linkTokenAddress,
-    keyHash,
-    fees
-  );
+  const FxStateChildTunnel_Factory: ContractFactory = await ethers.getContractFactory("FxStateChildTunnel");
+  const childTunnel: Contract = await FxStateChildTunnel_Factory.deploy(fxChild);
 
-  console.log("Deployed VRFChildTunnel at: ", vrfChildTunnel.address);
+  console.log("Deployed FxStateChildTunnel at: ", childTunnel.address);
 }
 
 main()
