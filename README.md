@@ -7,10 +7,10 @@ The contracts use Polygon's [FX portal](https://github.com/fx-portal/contracts) 
 ## Deployments
 
 ### Goerli
-`VRFRootTunnel.sol`: [0x8faD543dEecf009a37f24De9926e288c3C384adD](https://goerli.etherscan.io/address/0x8faD543dEecf009a37f24De9926e288c3C384adD#code)
+`FxStateRootTunnel.sol`: [0xC89498663Ff36F3c3Ed735979dF5574471819263](https://goerli.etherscan.io/address/0xC89498663Ff36F3c3Ed735979dF5574471819263#code)
 
 ### Mumbai
-`VRFChildTunnel.sol`: [0x4d475d62A03386F14949aeadB86e1Bcb506A2AE8](https://mumbai.polygonscan.com/address/0x4d475d62A03386F14949aeadB86e1Bcb506A2AE8#code)
+`FxStateChildTunnel.sol`: [0xBa2b61ca39dd6a5D7a135d4B5D3aadDec2B472da](https://mumbai.polygonscan.com/address/0xBa2b61ca39dd6a5D7a135d4B5D3aadDec2B472da#code)
 
 ## Run locally
 
@@ -41,7 +41,7 @@ Verify the deployed contracts:
 - In your `hardhat.config.ts` set the Etherscan API key to verify contracts on Ethereum mainnet or goerli, and the Polygonscan API key
 to verify contracts on matic or mumbai.
 
-- Run the following (e.g. verifying `VRFRootTunnel.sol` on goerli)
+- Run the following (e.g. verifying `FxStateRootTunnel.sol` on goerli)
 
 ```bash
 npx hardhat run tasks/verify.ts --network goerli
