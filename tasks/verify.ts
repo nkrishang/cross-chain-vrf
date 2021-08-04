@@ -20,7 +20,7 @@ async function Child() {
 	const { fxChild, fxERC1155Mumbai } = fxPortalTestnets
 
 	await hre.run("verify:verify", {
-    address:"0x96ed93caf5Da374Ce59F4846C77eAE26BC8C6C6e", 
+    address:"0x95ffd2FE01cccA6FD935432345570a532ab35E96", 
     constructorArguments: [
       fxChild,
       fxERC1155Mumbai
@@ -30,7 +30,7 @@ async function Child() {
 
 async function verify() {
   await Root()
-  await Child()
+//   await Child()
 }
 
 verify()

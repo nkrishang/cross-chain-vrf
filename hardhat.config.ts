@@ -69,8 +69,8 @@ const config: HardhatUserConfig = {
     flat: true,
   },
   etherscan: {
-    // apiKey: etherscanKey,
-    apiKey: polygonscanKey,
+    apiKey: etherscanKey,
+    // apiKey: polygonscanKey,
   }
 };
 
