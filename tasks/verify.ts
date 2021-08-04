@@ -3,25 +3,27 @@ import { fxPortalTestnets } from '../utils/maticBridge'
 
 async function Root() {
 
-	const { checkPointManager, fxRoot } = fxPortalTestnets
+	const { checkPointManager, fxRoot, fxERC1155Goerli } = fxPortalTestnets
 
 	await hre.run("verify:verify", {
-    address:"0xC89498663Ff36F3c3Ed735979dF5574471819263", 
+    address:"0x394F760b187Ca06431F10DC24400ae5c8fa645f0", 
     constructorArguments: [
       checkPointManager,
-			fxRoot
+			fxRoot,
+      fxERC1155Goerli
     ],
   });
 }
 
 async function Child() {
 
-	const { fxChild } = fxPortalTestnets
+	const { fxChild, fxERC1155Mumbai } = fxPortalTestnets
 
 	await hre.run("verify:verify", {
-    address:"0xBa2b61ca39dd6a5D7a135d4B5D3aadDec2B472da", 
+    address:"0x96ed93caf5Da374Ce59F4846C77eAE26BC8C6C6e", 
     constructorArguments: [
-      fxChild
+      fxChild,
+      fxERC1155Mumbai
     ],
   });
 }

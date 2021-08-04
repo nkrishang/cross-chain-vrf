@@ -11,12 +11,12 @@ async function main() {
   console.log(`Deploying contracts with account: ${await deployer.getAddress()}`)
 
   // Deploy Child to Matic || Mumbai
-  const { fxChild } = fxPortalTestnets;
+  const { fxChild, fxERC1155Mumbai } = fxPortalTestnets;
 
-  const FxStateChildTunnel_Factory: ContractFactory = await ethers.getContractFactory("FxStateChildTunnel");
-  const childTunnel: Contract = await FxStateChildTunnel_Factory.deploy(fxChild);
+  const FxERC1155ChildTunnel_Factory: ContractFactory = await ethers.getContractFactory("FxERC1155ChildTunnel");
+  const childTunnel: Contract = await FxERC1155ChildTunnel_Factory.deploy(fxChild, fxERC1155Mumbai);
 
-  console.log("Deployed FxStateChildTunnel at: ", childTunnel.address);
+  console.log("Deployed FxERC1155ChildTunnel at: ", childTunnel.address);
 }
 
 main()

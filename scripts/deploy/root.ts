@@ -11,12 +11,12 @@ async function main() {
   console.log(`Deploying contracts with account: ${await deployer.getAddress()}`)
 
   // Deploy Root to Mainnet || Goerli
-  const { checkPointManager, fxRoot } = fxPortalTestnets;
+  const { checkPointManager, fxRoot, fxERC1155Goerli } = fxPortalTestnets;
 
-  const FxStateRootTunnel_Factory: ContractFactory = await ethers.getContractFactory("FxStateRootTunnel");
-  const rootTunnel: Contract = await FxStateRootTunnel_Factory.deploy(checkPointManager, fxRoot)
+  const FxERC1155RootTunnel_Factory: ContractFactory = await ethers.getContractFactory("FxERC1155RootTunnel");
+  const rootTunnel: Contract = await FxERC1155RootTunnel_Factory.deploy(checkPointManager, fxRoot, fxERC1155Goerli)
 
-  console.log("Deployed FxStateRootTunnel at: ", rootTunnel.address);
+  console.log("Deployed FxERC1155RootTunnel at: ", rootTunnel.address);
 }
 
 main()
