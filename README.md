@@ -9,6 +9,8 @@ The contracts use Polygon's [FX portal](https://github.com/fx-portal/contracts) 
 ### Goerli
 `FxERC1155RootTunnel.sol`: [0x06e17322326f6ed715BEFc35F53e5EEA01836cB8](https://goerli.etherscan.io/address/0x06e17322326f6ed715BEFc35F53e5EEA01836cB8#code)
 
+`TestERC1155.sol`: [0x4939EC7ddC80aB44Ff91Eaa426Fa4EF315b9E38b](https://goerli.etherscan.io/address/0x4939EC7ddC80aB44Ff91Eaa426Fa4EF315b9E38b#code)
+
 ### Mumbai
 `FxERC1155ChildTunnel.sol`: [0x95ffd2FE01cccA6FD935432345570a532ab35E96](https://mumbai.polygonscan.com/address/0x95ffd2FE01cccA6FD935432345570a532ab35E96#code)
 
